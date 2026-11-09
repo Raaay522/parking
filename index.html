@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>停車須知・點餐前請確認</title>
+<style>
+  :root{
+    --bg:#f7f5f0; --card:#ffffff; --ink:#2b2622; --muted:#6f665e;
+    --ok:#2f8a4e; --ok-bg:#e8f4ec; --no:#c43c32; --no-bg:#fbeceb;
+    --accent:#6b4a2f; --line:#e6e0d6;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+    line-height:1.6;-webkit-text-size-adjust:100%}
+  main{max-width:560px;margin:0 auto;padding:20px 16px 40px}
+  header{text-align:center;padding:12px 0 8px}
+  header .tag{display:inline-block;font-size:13px;color:var(--accent);
+    border:1px solid var(--accent);border-radius:999px;padding:2px 12px;margin-bottom:10px}
+  h1{font-size:26px;margin:0 0 6px}
+  header p{margin:0;color:var(--muted);font-size:15px}
+  .notice{background:#fff7e6;border:1px solid #f1d9a6;border-radius:12px;
+    padding:12px 14px;margin:16px 0;font-size:15px;font-weight:600;text-align:center}
+  .legend{display:flex;gap:10px;margin:0 0 16px}
+  .legend div{flex:1;border-radius:10px;padding:8px 10px;font-size:14px;font-weight:600;text-align:center}
+  .legend .g{background:var(--ok-bg);color:var(--ok)}
+  .legend .r{background:var(--no-bg);color:var(--no)}
+  .legend span{display:inline-block;width:22px;height:4px;border-radius:2px;vertical-align:middle;margin-right:6px}
+  .legend .g span{background:var(--ok)} .legend .r span{background:var(--no)}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:14px;margin:0 0 14px}
+  section h2{font-size:18px;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+  section h2 .n{display:inline-flex;width:24px;height:24px;border-radius:50%;
+    background:var(--accent);color:#fff;font-size:13px;align-items:center;justify-content:center;flex:none}
+  .photo{width:100%;height:auto;border-radius:10px;display:block;margin:0 0 10px}
+  .ph{aspect-ratio:4/3;border:2px dashed var(--line);border-radius:10px;margin:0 0 10px;
+    display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px;background:#faf9f6}
+  ul{list-style:none;margin:0;padding:0}
+  li{padding:8px 10px;border-radius:8px;margin:0 0 6px;font-size:15px}
+  li.ok{background:var(--ok-bg)} li.no{background:var(--no-bg)}
+  li.ok::before{content:"✓ 可停　";color:var(--ok);font-weight:700}
+  li.no::before{content:"✕ 禁停　";color:var(--no);font-weight:700}
+  li b{font-weight:700}
+  .tip{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;
+    font-size:15px;margin:0 0 20px}
+  .tip strong{color:var(--accent)}
+  .go{display:block;width:100%;text-align:center;text-decoration:none;
+    background:var(--accent);color:#fff;font-size:20px;font-weight:700;
+    padding:18px 16px;border-radius:14px;box-shadow:0 4px 12px rgba(107,74,47,.25)}
+  .go small{display:block;font-size:13px;font-weight:400;opacity:.85;margin-top:2px}
+  .go:active{transform:translateY(1px)}
+  .foot{text-align:center;color:var(--muted);font-size:13px;margin-top:14px}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="tag">點餐前</div>
+    <h1>請確認愛車停放地點</h1>
+    <p>往下滑看完停車說明，最下方即可開始點餐</p>
+  </header>
+
+  <div class="notice">請勿占用巷口及街坊通行處，以免造成鄰居困擾</div>
+
+  <div class="legend">
+    <div class="g"><span></span>綠線處可停</div>
+    <div class="r"><span></span>紅線處禁停</div>
+  </div>
+
+  <section>
+    <h2><span class="n">1</span>咖啡廳巷弄</h2>
+    <img class="photo" src="img/alley.jpg" width="900" height="1612" alt="咖啡廳巷弄停車位置，綠線可停、紅線禁停">
+    <ul>
+      <li class="ok">綠線處<b>鐵門及玻璃門</b>前，請排列整齊、勿擋住巷子</li>
+      <li class="no">紅線處嚴禁停車，<b>會被檢舉開罰</b></li>
+    </ul>
+    <img class="photo" src="img/alley-no.jpg" width="900" height="1932" alt="巷弄內紅線禁停範圍" loading="lazy" style="margin-top:10px">
+    <ul>
+      <li class="no">圖上紅線範圍嚴禁停車，<b>會被檢舉開罰</b></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">2</span>咖啡廳側面</h2>
+    <img class="photo" src="img/side.jpg" width="900" height="709" alt="咖啡廳側面，鐵門前綠線可停" loading="lazy">
+    <ul>
+      <li class="ok">綠線處<b>鐵門</b>前可停，請排列整齊</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">3</span>咖啡廳對面</h2>
+    <img class="photo" src="img/front.jpg" width="900" height="646" alt="咖啡廳對面，綠線貼牆可停、紅線禁停" loading="lazy">
+    <ul>
+      <li class="ok">綠線處可停，請<b>貼牆停放</b>整齊</li>
+      <li class="no">紅線處為住家用地，嚴禁停車</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">4</span>蘭井街・忠義街交叉口</h2>
+    <img class="photo" src="img/corner.jpg" width="900" height="1148" alt="蘭井街與忠義街交叉口紅線禁停" loading="lazy">
+    <ul>
+      <li class="no">紅線處為住家用地，嚴禁停車</li>
+    </ul>
+  </section>
+
+  <div class="tip"><strong>附近停車格：</strong>民生北路及民族路上皆有停車格，請多加利用。<br>若有疑問，歡迎詢問工作人員。</div>
+
+  <a class="go" href="https://simpos.menu/online/merchants/d4f2da7b-4e66-4a32-9f1d-a518cf3eee36/menu" id="go">
+    確認停車位置適當，開始點餐
+    <small>點此進入點餐系統</small>
+  </a>
+
+  <div class="foot" id="seat"></div>
+</main>
+<script>
+(function(){
+  var base="https://simpos.menu/online/merchants/d4f2da7b-4e66-4a32-9f1d-a518cf3eee36/menu";
+  var q=new URLSearchParams(location.search);
+  var seat=q.get("seat"), map=q.get("seatMap")||"內用";
+  if(seat){
+    document.getElementById("go").href=base+"?seat="+encodeURIComponent(seat)+"&seatMap="+encodeURIComponent(map);
+    document.getElementById("seat").textContent="座位："+seat+"（"+map+"）";
+  }
+})();
+</script>
+</body>
+</html>
